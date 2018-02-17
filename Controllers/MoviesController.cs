@@ -37,6 +37,34 @@ namespace MovieBuff.Controllers
 		    //return View();
 		}
 
+        public ActionResult New()
+        {
+            var genres = _context.Genres.ToList();
+            var viewModel = new MovieFormViewModel
+            {
+                Genres = genres
+            };
+            return View("MovieForm", viewModel);
+        }
+
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+            {
+                _context.Movies.Add(movie);
+            } else
+            {
+                var movieDB = _context.Movies.Single(m => m.Id == movie.Id);
+                movieDB.GenreId = movie.GenreId;
+                movieDB.Name = movie.Name;
+                movieDB.ReleaseDate = movie.ReleaseDate;
+                movieDB.NumberInStock = movie.NumberInStock;
+            }
+            Console.WriteLine(movie);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
+        }
+
 	    public ActionResult Details(int id)
 	    {
 	        var movie = _context.Movies.Include(m => m.Genre).SingleOrDefault(m => m.Id == id);
