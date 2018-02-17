@@ -80,6 +80,7 @@ namespace MovieBuff.Controllers
             return View(customer);
         }
 
+
         public ActionResult Edit(int id)
         {
             var customer = _context.Customers.SingleOrDefault(c => c.Id == id);

@@ -103,7 +103,25 @@ namespace MovieBuff.Controllers
 
 		public ActionResult Edit(int id)
 		{
-			return Content("id=" + id);
+			//return Content("id=" + id);
+            var movie = _context.Movies.Single(m => m.Id == id);
+
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+
+            var genre = _context.Genres.ToList();
+
+            var viewController = new MovieFormViewModel
+            {
+                Movie = movie,
+                Genres = genre
+
+            };
+
+            return View("MovieForm", viewController);
+
 		}
 
 		// mvcaction4 then tab
