@@ -111,3 +111,11 @@ C:\Development\Web\DotNet\MovieBuff\obj\Debug\MovieBuff.csproj.GenerateResource.
 C:\Development\Web\DotNet\MovieBuff\obj\Debug\MovieBuff.dll
 C:\Development\Web\DotNet\MovieBuff\obj\Debug\MovieBuff.pdb
 C:\Development\Web\DotNet\MovieBuff\obj\Debug\MovieBuff.Migrations.MovieDateAddedOptional.resources
+C:\Development\Web\DotNet\MovieBuff\bin\System.Net.Http.Formatting.dll
+C:\Development\Web\DotNet\MovieBuff\bin\System.Web.Http.dll
+C:\Development\Web\DotNet\MovieBuff\bin\System.Web.Http.WebHost.dll
+C:\Development\Web\DotNet\MovieBuff\bin\System.Net.Http.Formatting.xml
+C:\Development\Web\DotNet\MovieBuff\bin\System.Web.Http.xml
+C:\Development\Web\DotNet\MovieBuff\bin\System.Web.Http.WebHost.xml
+C:\Development\Web\DotNet\MovieBuff\bin\AutoMapper.dll
+C:\Development\Web\DotNet\MovieBuff\bin\AutoMapper.xml
